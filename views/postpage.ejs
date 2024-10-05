@@ -1,0 +1,28 @@
+<!-- views/postpage.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= post.title %></title>
+</head>
+<body>
+    <h1><%= post.title %></h1>
+    <p><%= post.content %></p>
+
+    <h2>Comments</h2>
+    <form action="/posts/<%= post.id %>/comments" method="POST">
+        <textarea name="content" placeholder="Add a comment" required></textarea>
+        <button type="submit">Submit Comment</button>
+    </form>
+
+    <ul>
+        <% post.comments.forEach(comment => { %>
+            <li><%= comment.content %></li>
+        <% }); %>
+    </ul>
+
+    <a href="/newpost">Create New Post</a>
+    <a href="/posts">All posts</a>
+</body>
+</html>
