@@ -11,7 +11,9 @@
   "description": "",
   "dependencies": {
     "@prisma/client": "^5.20.0",
+    "bcryptjs": "^2.4.3",
     "cross-env": "^7.0.3",
+    "mysql2": "^3.11.3",
     "prisma": "^5.20.0"
   }
 }

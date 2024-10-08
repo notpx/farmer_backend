@@ -6,29 +6,31 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 <meta charset="UTF-8">
 <script src="https://cdn.tailwindcss.com"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>All Posts</title>
 <style>
 * {
-  font-family: "Inconsolata", monospace;
+  font-family: "Inter", sans-serif;
 
 
 }
 </style>
 </head>
 
-<body>
+<body class="bg-red-800">
 <div class="flex justify-between bg-red-900 shadow-lg">
 <h1 class="text-white  text-xl pl-8 py-3 ">All Posts</h1>
 <h1 class=" text-white pr-8 py-3 text-xl">Login</h1>
+<a class="text-center text-white p-3" href="/newpost">Create New Post</a>
 </div>
 <div class="bg-blue-800 pt-10">
 <div class="mx-20">
 
-<a href="/newpost">Create New Post</a>
 <% posts.forEach(post=> { %>
     <div class=" bg-white my-3 rounded-md px-7 py-8 mx-20">
     <a class="bold text-3xl text-grey-400" href="/posts/<%= post.id %>">
